@@ -4,6 +4,8 @@ import base64
 import streamlit as st
 import streamlit.components.v1 as components
 import openai
+from openai import OpenAI
+
 
 # -------------------------------
 # OpenAI Client (hardcoded key)
