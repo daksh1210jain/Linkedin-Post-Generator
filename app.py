@@ -5,12 +5,8 @@ import streamlit as st
 import streamlit.components.v1 as components
 from openai import OpenAI
 
-# Load API key securely from Streamlit Secrets
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
-# -------------------------------
-# Helper Functions
-# -------------------------------
 
 def generate_outlines(topic, tone, audience, n_posts=3):
     prompt = f"""
@@ -103,9 +99,6 @@ def copy_button(content, key):
     """
     return components.html(html_code, height=80)
 
-# -------------------------------
-# Streamlit UI
-# -------------------------------
 st.set_page_config(page_title="LinkedIn Post Agent", layout="centered")
 
 st.title("🤖 LinkedIn Post Generator (Agentic AI)")
