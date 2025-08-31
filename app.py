@@ -3,14 +3,10 @@ import re
 import base64
 import streamlit as st
 import streamlit.components.v1 as components
-import openai
 from openai import OpenAI
 
-
-# -------------------------------
-# OpenAI Client (hardcoded key)
-# -------------------------------
-openai.api_key = st.secrets["OPENAI_API_KEY"]
+# Load API key securely from Streamlit Secrets
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 # -------------------------------
 # Helper Functions
