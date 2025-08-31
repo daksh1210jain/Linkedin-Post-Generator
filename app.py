@@ -3,12 +3,12 @@ import re
 import base64
 import streamlit as st
 import streamlit.components.v1 as components
-from openai import OpenAI
+import openai
 
 # -------------------------------
 # OpenAI Client (hardcoded key)
 # -------------------------------
-client = OpenAI(api_key="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")  # <-- replace with your key
+openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 # -------------------------------
 # Helper Functions
